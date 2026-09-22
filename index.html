@@ -9,17 +9,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%2307090d'/%3E%3Cpath d='m10 13 14 25 14-25h-8l-6 11-6-11z' fill='%2395ff34'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%23030712'/%3E%3Cpath d='m10 13 14 25 14-25h-8l-6 11-6-11z' fill='%2328a9ff'/%3E%3C/svg%3E">
   <style>
     :root {
-      --bg:#07090d;
-      --surface:#0d1118;
-      --surface-2:#121824;
-      --text:#eef5f1;
-      --muted:#89939f;
-      --lime:#95ff34;
-      --blue:#4f7cff;
-      --cyan:#6ae4ff;
+      --bg:#030712;
+      --surface:#080f20;
+      --surface-2:#0b1630;
+      --text:#f5fbff;
+      --muted:#8b9bb0;
+      --lime:#28a9ff;
+      --blue:#4b5fff;
+      --cyan:#8be9ff;
       --line:rgba(238,245,241,.13);
       --pad:clamp(20px,4.2vw,72px);
       --radius:28px;
@@ -32,8 +32,9 @@
       overflow-x:hidden;
       color:var(--text);
       background:
-        radial-gradient(circle at 82% 8%,rgba(79,124,255,.14),transparent 27rem),
-        radial-gradient(circle at 12% 28%,rgba(149,255,52,.055),transparent 32rem),
+        radial-gradient(circle at 82% 8%,rgba(69,88,255,.22),transparent 30rem),
+        radial-gradient(circle at 12% 28%,rgba(40,169,255,.1),transparent 34rem),
+        radial-gradient(circle at 48% 72%,rgba(13,44,112,.2),transparent 38rem),
         var(--bg);
       font-family:Inter,Arial,sans-serif;
     }
@@ -49,7 +50,7 @@
       background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='170'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.23'/%3E%3C/svg%3E");
     }
 
-    ::selection { color:#071007; background:var(--lime); }
+    ::selection { color:#020612; background:var(--cyan); }
     a { color:inherit; text-decoration:none; }
     button { color:inherit; font:inherit; cursor:pointer; }
     svg { display:block; }
@@ -60,7 +61,7 @@
       top:12px;
       z-index:120;
       padding:10px 16px;
-      color:#071007;
+      color:#020612;
       background:var(--lime);
       transform:translateY(-150%);
     }
@@ -102,9 +103,9 @@
       width:29px;
       height:29px;
       overflow:hidden;
-      border:1px solid rgba(149,255,52,.55);
+      border:1px solid rgba(40,169,255,.65);
       border-radius:8px;
-      background:#0e1414;
+      background:#071026;
       transform:rotate(45deg);
     }
 
@@ -167,14 +168,14 @@
 
     .nav-cta,
     .primary-button {
-      color:#081006;
+      color:#020612;
       background:var(--lime);
-      box-shadow:0 0 0 1px rgba(149,255,52,.15),0 0 28px rgba(149,255,52,.09);
+      box-shadow:0 0 0 1px rgba(40,169,255,.2),0 0 28px rgba(40,169,255,.16);
     }
     .nav-cta:hover,
-    .primary-button:hover { transform:translateY(-2px); box-shadow:0 10px 35px rgba(149,255,52,.2); }
+    .primary-button:hover { transform:translateY(-2px); box-shadow:0 10px 35px rgba(40,169,255,.28); }
     .outline-button { border:1px solid var(--line); background:rgba(255,255,255,.025); }
-    .outline-button:hover { border-color:rgba(149,255,52,.52); background:rgba(149,255,52,.06); }
+    .outline-button:hover { border-color:rgba(40,169,255,.58); background:rgba(40,169,255,.08); }
 
     .menu-toggle {
       display:none;
@@ -314,7 +315,7 @@
       inset:6% 2% 5% 7%;
       overflow:hidden;
       clip-path:polygon(12% 0,100% 0,100% 81%,84% 100%,0 100%,0 16%);
-      background:#111722;
+      background:#071126;
       transform:rotateX(var(--tilt-y,0deg)) rotateY(var(--tilt-x,0deg));
       transition:transform .18s ease-out;
     }
@@ -326,18 +327,17 @@
       z-index:3;
       pointer-events:none;
       background:
-        linear-gradient(90deg,transparent 49.8%,rgba(149,255,52,.24) 50%,transparent 50.2%),
-        linear-gradient(transparent 49.8%,rgba(149,255,52,.16) 50%,transparent 50.2%),
+        linear-gradient(90deg,transparent 49.8%,rgba(40,169,255,.26) 50%,transparent 50.2%),
+        linear-gradient(transparent 49.8%,rgba(40,169,255,.18) 50%,transparent 50.2%),
         linear-gradient(140deg,transparent 52%,rgba(79,124,255,.22));
       background-size:72px 72px,72px 72px,100% 100%;
       mix-blend-mode:screen;
     }
 
-    .core-frame video {
+    .neural-arm {
       width:100%;
       height:100%;
-      object-fit:cover;
-      filter:contrast(1.08) saturate(.86);
+      display:block;
     }
 
     .video-shade {
@@ -345,7 +345,7 @@
       inset:0;
       z-index:2;
       pointer-events:none;
-      background:linear-gradient(180deg,transparent 50%,rgba(7,9,13,.58)),linear-gradient(90deg,rgba(7,9,13,.36),transparent 35%);
+      background:linear-gradient(180deg,transparent 54%,rgba(3,7,18,.62)),linear-gradient(90deg,rgba(3,7,18,.38),transparent 35%);
     }
 
     .core-reticle {
@@ -355,11 +355,11 @@
       z-index:5;
       width:106px;
       height:106px;
-      border:1px solid rgba(149,255,52,.64);
+      border:1px solid rgba(40,169,255,.72);
       border-radius:50%;
       pointer-events:none;
       transform:translate(-50%,-50%);
-      box-shadow:0 0 40px rgba(149,255,52,.08);
+      box-shadow:0 0 40px rgba(40,169,255,.14);
       transition:left .08s linear,top .08s linear;
     }
     .core-reticle::before,
@@ -396,17 +396,17 @@
     .core-data strong { display:block; margin-bottom:6px; font:500 19px "Space Grotesk"; }
     .core-data span { color:#9da8b2; font-size:11px; letter-spacing:.12em; text-transform:uppercase; }
 
-    .video-toggle {
+    .system-toggle {
       position:absolute;
       left:12%;
       bottom:8%;
       z-index:8;
       width:50px;
       height:50px;
-      border:1px solid rgba(149,255,52,.5);
+      border:1px solid rgba(40,169,255,.58);
       border-radius:50%;
       color:var(--lime);
-      background:rgba(7,9,13,.72);
+      background:rgba(3,7,18,.76);
       backdrop-filter:blur(12px);
     }
 
@@ -497,7 +497,7 @@
     }
     .build-card:nth-child(2) {
       background:
-        radial-gradient(circle at var(--mx,30%) var(--my,20%),rgba(149,255,52,.12),transparent 27%),
+        radial-gradient(circle at var(--mx,30%) var(--my,20%),rgba(40,169,255,.16),transparent 27%),
         var(--surface);
     }
     .card-code { display:flex; justify-content:space-between; color:#8f9aa5; font:500 10px "Space Grotesk"; letter-spacing:.14em; text-transform:uppercase; }
@@ -513,8 +513,8 @@
       border-radius:50%;
     }
     .system-glyph::before,
-    .system-glyph::after { content:""; position:absolute; inset:19%; border:1px solid rgba(149,255,52,.22); border-radius:50%; }
-    .system-glyph::after { inset:38%; background:var(--lime); box-shadow:0 0 45px rgba(149,255,52,.4); }
+    .system-glyph::after { content:""; position:absolute; inset:19%; border:1px solid rgba(40,169,255,.28); border-radius:50%; }
+    .system-glyph::after { inset:38%; background:var(--lime); box-shadow:0 0 45px rgba(40,169,255,.48); }
 
     .augmentation {
       display:grid;
@@ -532,9 +532,18 @@
     .spec-list li { padding:18px 0; display:grid; grid-template-columns:40px 1fr auto; gap:16px; border-bottom:1px solid var(--line); color:#bec6cd; font-size:13px; }
     .spec-list b { color:var(--lime); font:500 11px "Space Grotesk"; }
     .spec-list span:last-child { color:#717d88; }
-    .augmentation-visual { position:relative; min-height:650px; overflow:hidden; background:#0d121a; }
-    .augmentation-visual video { width:100%; height:100%; object-fit:cover; filter:grayscale(.15) contrast(1.1); }
-    .augmentation-visual::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg,#090c11,transparent 22%),linear-gradient(0deg,rgba(9,12,17,.75),transparent 45%); pointer-events:none; }
+    .augmentation-visual { position:relative; min-height:650px; overflow:hidden; background:radial-gradient(circle at 56% 45%,rgba(40,169,255,.18),transparent 32%),linear-gradient(145deg,#08152e,#020611 72%); }
+    .augmentation-visual::before { content:""; position:absolute; inset:0; background-image:linear-gradient(rgba(40,169,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(40,169,255,.08) 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(to left,#000,transparent 90%); }
+    .augmentation-visual::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg,#060b18,transparent 24%),linear-gradient(0deg,rgba(3,7,18,.78),transparent 45%); pointer-events:none; }
+    .blueprint-arm { position:absolute; inset:3% 1% 0 8%; width:91%; height:97%; z-index:1; filter:drop-shadow(0 0 28px rgba(40,169,255,.22)); }
+    .arm-path { fill:none; stroke:url(#armBlue); stroke-linecap:round; stroke-linejoin:round; }
+    .arm-shell { fill:rgba(5,17,42,.78); stroke:#4cc8ff; stroke-width:4; }
+    .arm-detail { fill:none; stroke:#9eeeff; stroke-width:2; opacity:.72; }
+    .arm-node { fill:#f7fcff; stroke:#28a9ff; stroke-width:7; }
+    .signal-path { fill:none; stroke:#fff; stroke-width:3; stroke-dasharray:10 15; animation:signalFlow 2.5s linear infinite; filter:url(#blueGlow); }
+    .diagnostic .signal-path { stroke-width:5; animation-duration:1s; }
+    .diagnostic .arm-node { filter:url(#blueGlow); }
+    @keyframes signalFlow { to { stroke-dashoffset:-50; } }
     .visual-caption { position:absolute; left:8%; right:8%; bottom:7%; z-index:2; display:flex; justify-content:space-between; gap:30px; color:#b8c1c9; font:500 10px "Space Grotesk"; letter-spacing:.16em; text-transform:uppercase; }
     .scan-line { position:absolute; left:0; right:0; top:20%; z-index:3; height:1px; background:linear-gradient(90deg,transparent,var(--lime),transparent); box-shadow:0 0 24px var(--lime); animation:scan 5s ease-in-out infinite alternate; }
     @keyframes scan { to { top:82%; } }
@@ -567,7 +576,7 @@
       background:var(--surface);
       transition:background .25s,border-color .25s;
     }
-    .service:hover { border-color:rgba(149,255,52,.4); background:#10171c; }
+    .service:hover { border-color:rgba(40,169,255,.48); background:#0a1730; }
     .service h3 { margin:0; font:500 24px "Space Grotesk"; }
     .service span { color:#7f8b95; font-size:11px; }
 
@@ -587,8 +596,8 @@
     .convergence-stage p { max-width:520px; margin:30px 0 0; color:#9ba6b0; line-height:1.7; }
     .fusion-diagram { position:relative; aspect-ratio:1; max-width:590px; width:100%; justify-self:center; }
     .fusion-ring { position:absolute; inset:8%; border:1px solid rgba(79,124,255,.35); border-radius:50%; animation:orbit 24s linear infinite reverse; }
-    .fusion-ring.two { inset:23%; border-color:rgba(149,255,52,.38); animation-duration:15s; animation-direction:normal; }
-    .fusion-core { position:absolute; inset:38%; display:grid; place-items:center; border-radius:50%; color:#081006; background:var(--lime); box-shadow:0 0 70px rgba(149,255,52,.28); font:700 13px "Space Grotesk"; letter-spacing:.12em; }
+    .fusion-ring.two { inset:23%; border-color:rgba(40,169,255,.44); animation-duration:15s; animation-direction:normal; }
+    .fusion-core { position:absolute; inset:38%; display:grid; place-items:center; border-radius:50%; color:#020612; background:var(--lime); box-shadow:0 0 70px rgba(40,169,255,.34); font:700 13px "Space Grotesk"; letter-spacing:.12em; }
     .fusion-node { position:absolute; padding:9px 12px; border:1px solid var(--line); background:#0a0e14; color:#aeb8c0; font:500 10px "Space Grotesk"; letter-spacing:.12em; text-transform:uppercase; }
     .fusion-node.a { left:0; top:47%; }.fusion-node.b { right:0; top:47%; }.fusion-node.c { left:40%; top:0; }.fusion-node.d { left:36%; bottom:0; }
 
@@ -632,16 +641,25 @@
       display:flex;
       flex-direction:column;
       justify-content:space-between;
-      color:#071007;
-      background:var(--lime);
+      color:#f5fbff;
+      border:1px solid rgba(79,150,255,.35);
+      background:
+        radial-gradient(circle at 85% 18%,rgba(88,74,255,.58),transparent 27%),
+        radial-gradient(circle at 20% 86%,rgba(40,169,255,.42),transparent 31%),
+        linear-gradient(135deg,#06183b,#09051f 66%,#02050d);
     }
-    .contact-shell::after { content:""; position:absolute; right:-8%; top:-35%; width:55%; aspect-ratio:1; border:1px solid rgba(7,16,7,.24); border-radius:50%; box-shadow:0 0 0 70px rgba(7,16,7,.04),0 0 0 140px rgba(7,16,7,.035); }
-    .contact-shell .eyebrow { color:#1b2b14; }
-    .contact-shell .eyebrow::before { background:#071007; box-shadow:none; }
+    .contact-shell::after { content:""; position:absolute; right:-8%; top:-35%; width:55%; aspect-ratio:1; border:1px solid rgba(139,233,255,.28); border-radius:50%; box-shadow:0 0 0 70px rgba(75,95,255,.08),0 0 0 140px rgba(40,169,255,.05); }
+    .contact-shell .eyebrow { color:#c8eaff; }
+    .contact-shell .eyebrow::before { background:var(--cyan); box-shadow:0 0 18px var(--cyan); }
     .contact-shell h2 { position:relative; z-index:2; max-width:1100px; }
+    .contact-links { position:relative; z-index:3; margin:34px 0 48px; display:grid; grid-template-columns:repeat(5,1fr); border-top:1px solid rgba(255,255,255,.22); border-left:1px solid rgba(255,255,255,.22); }
+    .contact-link { min-height:88px; padding:18px; display:flex; align-items:center; justify-content:space-between; gap:10px; border-right:1px solid rgba(255,255,255,.22); border-bottom:1px solid rgba(255,255,255,.22); background:rgba(255,255,255,.035); font:500 12px "Space Grotesk"; letter-spacing:.1em; text-transform:uppercase; transition:background .25s,color .25s; }
+    .contact-link:hover { color:#031023; background:#f5fbff; }
+    .contact-link span { color:var(--cyan); font-size:18px; }
+    .contact-link:hover span { color:#126fdd; }
     .contact-row { position:relative; z-index:2; display:flex; align-items:flex-end; justify-content:space-between; gap:30px; }
     .contact-row p { max-width:500px; margin:0; font-size:17px; line-height:1.55; }
-    .dark-button { min-height:58px; padding:0 26px; border:0; color:white; background:#071007; font-weight:600; letter-spacing:.08em; text-transform:uppercase; }
+    .dark-button { min-height:58px; padding:0 26px; border:0; color:#031023; background:#f5fbff; font-weight:600; letter-spacing:.08em; text-transform:uppercase; }
 
     footer {
       padding:42px var(--pad);
@@ -653,6 +671,9 @@
     }
     .footer-brand { font:500 clamp(22px,3vw,42px) "Space Grotesk"; letter-spacing:-.04em; }
     .footer-meta { color:#6f7a85; font-size:11px; line-height:1.7; text-align:right; text-transform:uppercase; letter-spacing:.12em; }
+    .footer-links { grid-column:1/-1; padding-top:24px; display:flex; gap:24px; flex-wrap:wrap; border-top:1px solid var(--line); }
+    .footer-links a { color:#8d9bae; font-size:11px; letter-spacing:.12em; text-transform:uppercase; }
+    .footer-links a:hover { color:var(--cyan); }
 
     .reveal { opacity:0; transform:translateY(38px); transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1); }
     .reveal.in { opacity:1; transform:none; }
@@ -690,7 +711,8 @@
       .mobile-menu { grid-template-columns:1fr; max-height:calc(100svh - 70px); overflow:auto; }
       .hero { min-height:auto; padding-top:112px; gap:42px; }
       .hero::before { top:88px; }
-      h1 { font-size:clamp(50px,15vw,72px); }
+      .hero > *,.hero-copy { min-width:0; }
+      h1 { font-size:clamp(46px,13.4vw,66px); }
       h1 .signal { padding-left:.24em; }
       .hero-intro,.hero-actions { margin-left:0; }
       .hero-actions { display:grid; grid-template-columns:1fr; }
@@ -718,6 +740,8 @@
       .rd-item { grid-template-columns:52px 1fr; }
       .rd-item p { grid-column:2; }
       .contact-shell { margin:0 0 20px; min-height:620px; }
+      .contact-links { grid-template-columns:1fr 1fr; }
+      .contact-link:last-child { grid-column:1/-1; }
       .contact-row { align-items:flex-start; flex-direction:column; }
       footer { grid-template-columns:1fr; }
       .footer-meta { text-align:left; }
@@ -781,13 +805,34 @@
       <div class="motion-core" aria-label="Interactive Kinetix Reach bionic arm visual">
         <div class="orbital" aria-hidden="true"></div>
         <div class="core-frame">
-          <video class="kinetix-video" autoplay muted loop playsinline preload="metadata" aria-label="Kinetix Reach bionic arm in motion">
-            <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260815_075403_f5e02d94-0311-4ff3-bedb-81dc78803882.mp4" type="video/mp4">
-          </video>
+          <svg class="neural-arm" viewBox="0 0 800 900" role="img" aria-label="Neon blueprint of the Kinetix Reach bionic arm">
+            <defs>
+              <linearGradient id="armBlueHero" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5fbff"/><stop offset=".35" stop-color="#45c8ff"/><stop offset="1" stop-color="#354cff"/></linearGradient>
+              <radialGradient id="spaceHero"><stop stop-color="#163f88"/><stop offset="1" stop-color="#030712"/></radialGradient>
+              <filter id="blueGlowHero"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              <pattern id="starsHero" width="90" height="90" patternUnits="userSpaceOnUse"><circle cx="9" cy="20" r="1" fill="#fff" opacity=".45"/><circle cx="66" cy="54" r="1.4" fill="#52c8ff" opacity=".65"/><circle cx="42" cy="82" r=".7" fill="#fff" opacity=".35"/></pattern>
+            </defs>
+            <rect width="800" height="900" fill="url(#spaceHero)"/>
+            <rect width="800" height="900" fill="url(#starsHero)"/>
+            <g filter="url(#blueGlowHero)" opacity=".28"><path d="M570 102 446 365 315 612 238 772" fill="none" stroke="#28a9ff" stroke-width="96" stroke-linecap="round"/></g>
+            <g>
+              <circle class="arm-shell" cx="572" cy="110" r="76"/>
+              <path class="arm-shell" d="M540 165 468 320l-72 26-34-57 106-156z"/>
+              <circle class="arm-shell" cx="398" cy="353" r="58"/>
+              <path class="arm-shell" d="m374 396-99 191 40 55 62-28 81-199z"/>
+              <circle class="arm-shell" cx="291" cy="625" r="47"/>
+              <path class="arm-shell" d="m270 657-64 77 39 76 97-67 3-66z"/>
+              <path class="arm-shell" d="m228 762-82 31 9 28 91-11zm20 45-67 54 18 22 74-56zm35 14-35 69 25 10 43-64zm-61-20-91 10 4 27 94-2z"/>
+              <path class="arm-detail" d="m544 96 58 35m-98 69 58 30m-135 77-18 94m-88 43 49 22m-79 111 8 94m-64 65 111-20"/>
+              <path class="signal-path" d="M572 72 545 193 407 350 365 449 292 625 275 720 238 774"/>
+              <circle class="arm-node" cx="572" cy="110" r="17"/><circle class="arm-node" cx="398" cy="353" r="15"/><circle class="arm-node" cx="291" cy="625" r="13"/>
+            </g>
+            <g fill="#8be9ff" font-family="Space Grotesk, sans-serif" font-size="16" letter-spacing="3"><text x="44" y="90">KINETIX / KR-01</text><text x="508" y="850">INTENT SIGNAL: STABLE</text></g>
+          </svg>
           <div class="video-shade"></div>
           <div class="core-reticle" aria-hidden="true"></div>
           <div class="core-data"><strong>Kinetix Reach</strong><span>Intent → action / 12 ms</span></div>
-          <button class="video-toggle" type="button" aria-label="Pause Kinetix Reach video" aria-pressed="false">Ⅱ</button>
+          <button class="system-toggle" type="button" aria-label="Toggle diagnostic signal view" aria-pressed="false">◎</button>
         </div>
         <span class="core-tag top">KR-01 / Live system</span>
         <span class="core-tag bottom">Move pointer to inspect</span>
@@ -839,9 +884,26 @@
         </ul>
       </div>
       <div class="augmentation-visual reveal">
-        <video autoplay muted loop playsinline preload="metadata" aria-label="Close view of Kinetix Reach bionic arm">
-          <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260815_075403_f5e02d94-0311-4ff3-bedb-81dc78803882.mp4" type="video/mp4">
-        </video>
+        <svg class="blueprint-arm" viewBox="0 0 800 900" role="img" aria-label="Technical blueprint of the Kinetix Reach bionic arm">
+          <defs>
+            <linearGradient id="armBlueDetail" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5fbff"/><stop offset=".42" stop-color="#28a9ff"/><stop offset="1" stop-color="#4558ff"/></linearGradient>
+            <filter id="blueGlowDetail"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <g transform="translate(28 -10)">
+            <path d="M590 88 452 352 312 618 218 790" fill="none" stroke="url(#armBlueDetail)" stroke-width="112" stroke-linecap="round" opacity=".15" filter="url(#blueGlowDetail)"/>
+            <circle class="arm-shell" cx="590" cy="100" r="82"/>
+            <path class="arm-shell" d="m555 160-82 165-73 34-42-62 115-179z"/>
+            <circle class="arm-shell" cx="402" cy="370" r="62"/>
+            <path class="arm-shell" d="m372 416-105 196 45 62 69-31 82-205z"/>
+            <circle class="arm-shell" cx="290" cy="650" r="49"/>
+            <path class="arm-shell" d="m267 681-67 73 34 78 108-62 5-70z"/>
+            <path class="arm-shell" d="m227 787-97 17 5 31 101 2zm26 37-74 56 17 25 85-60zm40 10-33 70 28 10 44-68zm-75-21-102-2 1 30 105 7z"/>
+            <path class="arm-detail" d="m552 85 75 40m-122 61 73 35m-146 77-35 122m-77 52 61 20m-96 112 16 102m-84 53 125-10"/>
+            <path class="signal-path" d="M590 54 558 180 414 366 368 477 292 648 270 742 218 790"/>
+            <circle class="arm-node" cx="590" cy="100" r="18"/><circle class="arm-node" cx="402" cy="370" r="16"/><circle class="arm-node" cx="290" cy="650" r="14"/>
+          </g>
+          <g fill="#8be9ff" font-family="Space Grotesk, sans-serif" font-size="15" letter-spacing="3"><text x="50" y="80">BIOMECHANICAL ASSEMBLY</text><text x="472" y="860">CALIBRATION / ACTIVE</text></g>
+        </svg>
         <div class="scan-line" aria-hidden="true"></div>
         <div class="visual-caption"><span>Adaptive mechanics</span><span>Prototype series / 01</span></div>
       </div>
@@ -904,7 +966,7 @@
           <div class="card-code"><span>Perception</span><span>02</span></div>
           <h3>Sensor fusion</h3>
           <p>Multiple inputs. One coherent view.</p>
-          <svg class="wave" viewBox="0 0 600 110" preserveAspectRatio="none" aria-hidden="true"><path d="M0 64c55 0 55-48 110-48s55 77 110 77 55-61 110-61 55 42 110 42 55-29 110-29 55 18 110 18" fill="none" stroke="#95ff34" stroke-width="2"/></svg>
+          <svg class="wave" viewBox="0 0 600 110" preserveAspectRatio="none" aria-hidden="true"><path d="M0 64c55 0 55-48 110-48s55 77 110 77 55-61 110-61 55 42 110 42 55-29 110-29 55 18 110 18" fill="none" stroke="#28a9ff" stroke-width="2"/></svg>
         </article>
         <article class="tech-card reveal reactive-card">
           <div class="card-code"><span>Materials</span><span>03</span></div>
@@ -941,9 +1003,16 @@
     <section id="contact" class="contact-shell reveal">
       <p class="eyebrow">07 / WORK WITH US</p>
       <h2>Build what the future will <strong>depend on.</strong></h2>
+      <div class="contact-links" aria-label="Connect with V.A.L.T.A.I.R INDUSTRIES">
+        <a class="contact-link" href="https://www.linkedin.com/company/valtair-industries/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
+        <a class="contact-link" href="https://www.instagram.com/valtairindustries/" target="_blank" rel="noreferrer">Instagram <span>↗</span></a>
+        <a class="contact-link" href="https://www.facebook.com/profile.php?id=61592403044591" target="_blank" rel="noreferrer">Facebook <span>↗</span></a>
+        <a class="contact-link" href="https://api.whatsapp.com/send/?phone=919606673138&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noreferrer">WhatsApp <span>↗</span></a>
+        <a class="contact-link" href="https://maps.app.goo.gl/i6V8aNizSXXRM2y7A" target="_blank" rel="noreferrer">Find us <span>↗</span></a>
+      </div>
       <div class="contact-row">
         <p>We want engineers, researchers, designers, and ambitious partners who are ready to turn difficult ideas into working systems.</p>
-        <button class="dark-button contact-button" type="button">hello@valtair.industries ↗</button>
+        <a class="dark-button" href="mailto:valtairindustries@outlook.com">valtairindustries@outlook.com ↗</a>
       </div>
     </section>
   </main>
@@ -951,6 +1020,14 @@
   <footer>
     <div class="footer-brand">V.A.L.T.A.I.R INDUSTRIES</div>
     <div class="footer-meta">Physical intelligence / Digital intelligence<br>© 2026 V.A.L.T.A.I.R INDUSTRIES</div>
+    <div class="footer-links">
+      <a href="mailto:valtairindustries@outlook.com">Email</a>
+      <a href="https://www.linkedin.com/company/valtair-industries/" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="https://www.instagram.com/valtairindustries/" target="_blank" rel="noreferrer">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61592403044591" target="_blank" rel="noreferrer">Facebook</a>
+      <a href="https://api.whatsapp.com/send/?phone=919606673138&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noreferrer">WhatsApp</a>
+      <a href="https://maps.app.goo.gl/i6V8aNizSXXRM2y7A" target="_blank" rel="noreferrer">Location</a>
+    </div>
   </footer>
 
   <div class="toast" role="status" aria-live="polite"></div>
@@ -1028,22 +1105,6 @@
         });
       });
 
-      const mainVideo = document.querySelector('.kinetix-video');
-      const videoButton = document.querySelector('.video-toggle');
-      videoButton.addEventListener('click',() => {
-        if (mainVideo.paused) {
-          mainVideo.play();
-          videoButton.textContent = 'Ⅱ';
-          videoButton.setAttribute('aria-label','Pause Kinetix Reach video');
-          videoButton.setAttribute('aria-pressed','false');
-        } else {
-          mainVideo.pause();
-          videoButton.textContent = '▶';
-          videoButton.setAttribute('aria-label','Play Kinetix Reach video');
-          videoButton.setAttribute('aria-pressed','true');
-        }
-      });
-
       const toast = document.querySelector('.toast');
       let toastTimer;
       function say(message) {
@@ -1053,14 +1114,12 @@
         toastTimer = setTimeout(() => toast.classList.remove('show'),1800);
       }
 
-      document.querySelector('.contact-button').addEventListener('click',async () => {
-        const email = 'hello@valtair.industries';
-        try {
-          await navigator.clipboard.writeText(email);
-          say('Email copied — ' + email);
-        } catch {
-          location.href = 'mailto:' + email;
-        }
+      const systemButton = document.querySelector('.system-toggle');
+      systemButton.addEventListener('click',() => {
+        const active = frame.classList.toggle('diagnostic');
+        systemButton.setAttribute('aria-pressed',String(active));
+        systemButton.textContent = active ? '◉' : '◎';
+        say(active ? 'Diagnostic signal amplified' : 'Standard signal view');
       });
 
       if (!reduced) {
